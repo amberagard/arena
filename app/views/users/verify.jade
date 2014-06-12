@@ -1,0 +1,10 @@
+extends ../shared/template
+
+block content
+  h1= title
+
+  h2= u.email
+
+  form(method='post', action='/verify/' + u._id)
+    input(type='password', name='password', autofocus=true, placeholder='Enter Password')
+    button Set Password
